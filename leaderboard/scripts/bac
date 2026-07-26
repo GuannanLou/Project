@@ -1,0 +1,1094 @@
+GA_search
+begin GA_search_collision
+
+CHECK n_var
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (2, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:08:14" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (2, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.90 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.825586751193912
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.70 seconds
+
+
+Total Time: -24.60 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5200221
+  Serial number of failed request:  1843
+  Current serial number in output stream:  1843
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            16640
+Killed
+out['F'] [0.         0.41672033] float64 (2,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:12:17" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.85 seconds
+
+
+Total Time: -18.85 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            19257
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:14:27" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 86
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.65 seconds
+
+
+Total Time: -20.65 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            20708
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:16:47" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 91
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.05 seconds
+
+
+Total Time: -24.05 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            22462
+Killed
+out['F'] [0.23527476] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:19:25" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 87
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.40 seconds
+
+
+Total Time: -22.40 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            24767
+Killed
+out['F'] [0.46093112] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:21:54" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 84
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 21.85 seconds
+
+
+Total Time: -21.85 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            26967
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:24:21" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.985370915761468
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.90 seconds
+
+
+Total Time: -18.90 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            29226
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:26:32" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 19.35 seconds
+
+
+Total Time: -19.35 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            31158
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:28:46" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.95 seconds
+
+
+Total Time: -18.95 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            33188
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:31:00" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.965029269273828
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.95 seconds
+
+
+Total Time: -18.95 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            35175
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:33:12" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.88530889204421
+# of added vehicles: 88
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.85 seconds
+
+
+Total Time: -22.85 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            37119
+Killed
+out['F'] [0.43668646] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:35:40" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.754702123351004
+# of added vehicles: 90
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.70 seconds
+
+
+Total Time: -18.70 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            39351
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:37:50" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 90
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.95 seconds
+
+
+Total Time: -20.95 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            41268
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:40:16" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.751288295490701
+# of added vehicles: 86
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.25 seconds
+
+
+Total Time: -20.25 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            43830
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:42:36" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.946710906565647
+# of added vehicles: 90
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 19.25 seconds
+
+
+Total Time: -19.25 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            45924
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:44:53" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 85
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.80 seconds
+
+
+Total Time: -20.80 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            47941
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:47:13" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 84
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.40 seconds
+
+
+Total Time: -20.40 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            50036
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-06|13:49:36" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+PORT1: 2000
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (1, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 83
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.70 seconds
+
+
+Total Time: -20.70 seconds
+
+
+call _cleanup in:
+    __del__
+
+!!RUNNING FINISHED!!
+
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            52119
+Killed
+out['F'] [0.] float64 (1,)
+
+
+Problem _evaluate
+
+Save Scenario Vector
+x: (1, 71)
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.

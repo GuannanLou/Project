@@ -1,0 +1,4266 @@
+(base) guannan@dcs33976:~$ set_interfuser
+(carla915) guannan@dcs33976:~/Projects/TCP-Interfuser$ python leaderboard/pipeline.py
+GA_search
+begin GA_search_collision
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|17:32:30" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (20, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.924749625583523
+# of added vehicles: 80
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.25 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.825586751193912
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.15 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.91076329038221
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.10 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.83025806100397
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.60 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.649517359185683
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.75 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.150670869033862
+# of added vehicles: 80
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.35 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.828145552288214
+# of added vehicles: 74
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 9.10 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.135086962248309
+# of added vehicles: 92
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -8.10 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.31490363261092
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.85 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.125810246202434
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.80 seconds
+
+
+Case 10
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.39957705190973
+# of added vehicles: 64
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.95 seconds
+
+
+Case 11
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.8457341850624
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.25 seconds
+
+
+Case 12
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.425008124285924
+# of added vehicles: 67
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.15 seconds
+
+
+Case 13
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.681000237859681
+# of added vehicles: 94
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.65 seconds
+
+
+Case 14
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.564988305864407
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.40 seconds
+
+
+Case 15
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.12969068442577
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.60 seconds
+
+
+Case 16
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.53112459045344
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.30 seconds
+
+
+Case 17
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.824886010638258
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.85 seconds
+
+
+Case 18
+Run Scenario
+Town: Town10HD
+Signal 11 caught.
+Malloc Size=65538 LargeMemoryPoolOffset=65554 
+CommonUnixCrashHandler: Signal=11
+Malloc Size=131160 LargeMemoryPoolOffset=196744 
+Malloc Size=131160 LargeMemoryPoolOffset=327928 
+Engine crash handling finished; re-raising signal 11 for the default handler. Good bye.
+Segmentation fault (core dumped)
+Aborted (core dumped)
+
+fuser -k 2000/tcp
+Stop by port
+Fail to stop by port: 1
+
+
+18 20
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|17:32:30" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (2, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.51263059662828
+# of added vehicles: 70
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 21.40 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.202798040661044
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.60 seconds
+
+
+Total Time: -27.00 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000221
+  Serial number of failed request:  1815
+  Current serial number in output stream:  1815
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            51464
+Killed
+
+
+20 20
+=================================================
+n_gen  |  n_eval  |     f_avg     |     f_min    
+=================================================
+     1 |       20 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|18:14:18" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.889418664730762
+# of added vehicles: 80
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.00 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.28515619370643
+# of added vehicles: 87
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.10 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.509094352979302
+# of added vehicles: 80
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.50 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.424811357439285
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.65 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.813876628330334
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.15 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.898226758097687
+# of added vehicles: 87
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.85 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.103653084669787
+# of added vehicles: 65
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 10.00 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.232228978352257
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -9.25 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.748115260512762
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.50 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.882158142808533
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.50 seconds
+
+
+Total Time: -26.00 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            55800
+Killed
+
+
+10 10
+     2 |       30 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|18:33:18" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.26784025326118
+# of added vehicles: 91
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.60 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.190928287147084
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 40.55 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.963742415562303
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -36.85 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.167435351566954
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.55 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.79342194127754
+# of added vehicles: 74
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.35 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.378841319952013
+# of added vehicles: 65
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.10 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.565331321741432
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.15 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.114279504453094
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.05 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.205006147701072
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.90 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.42971329013166
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.00 seconds
+
+
+Total Time: -24.40 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            74117
+Killed
+
+
+10 10
+     3 |       40 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|18:56:49" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.629300848120776
+# of added vehicles: 76
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 29.00 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.279328459454613
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -6.10 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.05882986803431
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.15 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.391648792045082
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.80 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.700285757982094
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.15 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.466454025646943
+# of added vehicles: 62
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.20 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.785923844357212
+# of added vehicles: 80
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.40 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.669971227759792
+# of added vehicles: 65
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.75 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.524784442710027
+# of added vehicles: 93
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.75 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.568756338574415
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.60 seconds
+
+
+Total Time: -23.10 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            96845
+Killed
+
+
+10 10
+     4 |       50 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|19:16:57" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.516948367415903
+# of added vehicles: 77
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 26.50 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.001204943367034
+# of added vehicles: 78
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.25 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.642681101731116
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 38.25 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.12967997011791
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -45.30 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.14519955623809
+# of added vehicles: 63
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.75 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.05549511295235
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.65 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 19.515356322207218
+# of added vehicles: 60
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.65 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.418022445347479
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.05 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.442508970285907
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 8.20 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.705818313788603
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.85 seconds
+
+
+Total Time: -24.25 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            115632
+Killed
+
+
+10 10
+     5 |       60 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|19:40:57" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.32451887676421
+# of added vehicles: 102
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 19.50 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.908429157569442
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.20 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.927499009936852
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.10 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.868097033434694
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.05 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.976616155650785
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.10 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.563579489232108
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.90 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.95706745200613
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.05 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.638563931131516
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.75 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.6308678199797
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.20 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.571751186126892
+# of added vehicles: 92
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.45 seconds
+
+
+Total Time: -23.60 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6906
+  Current serial number in output stream:  6906
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            138248
+Killed
+
+
+10 10
+     6 |       70 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|19:59:42" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.995002461578583
+# of added vehicles: 83
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 23.35 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.405045089633177
+# of added vehicles: 101
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.30 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.663084920865826
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.05 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.593076217954318
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -6.75 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.658422148293353
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.00 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.48345825105005
+# of added vehicles: 81
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.20 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.86435340077237
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.65 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.62629720437084
+# of added vehicles: 65
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 67.85 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.688259835200697
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -65.05 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.236356866593017
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.90 seconds
+
+
+Total Time: -27.60 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            155992
+Killed
+
+
+10 10
+     7 |       80 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|20:24:12" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.18049903587212
+# of added vehicles: 79
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 26.65 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.519296714525327
+# of added vehicles: 91
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.85 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.748620492569403
+# of added vehicles: 89
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.65 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.739134552603325
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.10 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.701385566193885
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.35 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.481785277124242
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.10 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.545039969273517
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.55 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.41299362895251
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.95 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.846704747354575
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.25 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.886677830203782
+# of added vehicles: 87
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -6.40 seconds
+
+
+Total Time: -21.45 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            179232
+Killed
+
+
+10 10
+     8 |       90 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|20:43:53" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.706126864211594
+# of added vehicles: 67
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.90 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.990722632271211
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.05 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.846245625725189
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.35 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.649517359185683
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.70 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.49894716518356
+# of added vehicles: 78
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.45 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.09086515003344
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.75 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.651645341096167
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.10 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.78723583815858
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 6.80 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.653504054059617
+# of added vehicles: 64
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.25 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.748097723466712
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.65 seconds
+
+
+Total Time: -24.00 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6906
+  Current serial number in output stream:  6906
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            197746
+Killed
+
+
+10 10
+     9 |      100 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|21:03:45" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.790150975370057
+# of added vehicles: 97
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 21.65 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.32195125041515
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.40 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.582645049035058
+# of added vehicles: 103
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.80 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.79941845019247
+# of added vehicles: 80
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.15 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.69171139762624
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -19.45 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.35048966438848
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.60 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.62222214060087
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.50 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.099101073121581
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.65 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.521937239053354
+# of added vehicles: 67
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.35 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.144208039621887
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.40 seconds
+
+
+Total Time: -24.65 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6906
+  Current serial number in output stream:  6906
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            216641
+Killed
+
+
+10 10
+    10 |      110 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|21:25:45" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.423562636412882
+# of added vehicles: 99
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 21.00 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.575903551375024
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.40 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.838806819324175
+# of added vehicles: 74
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.85 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.857043602095318
+# of added vehicles: 89
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.25 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.905945916072698
+# of added vehicles: 93
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.65 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.228628989034718
+# of added vehicles: 65
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.65 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.651678161016282
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.45 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.755079027071126
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.90 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.469391849765184
+# of added vehicles: 67
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.50 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.434905300074893
+# of added vehicles: 87
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.20 seconds
+
+
+Total Time: -26.15 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6906
+  Current serial number in output stream:  6906
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            237598
+Killed
+
+
+10 10
+    11 |      120 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|21:45:24" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.597096798908044
+# of added vehicles: 99
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.55 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.815674299298076
+# of added vehicles: 92
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.25 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.684082124184737
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.80 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.488393874689338
+# of added vehicles: 89
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.10 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.799496337372744
+# of added vehicles: 95
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.30 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.032810793649563
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.00 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.630114112815118
+# of added vehicles: 67
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 9.10 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.922970759576167
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -10.90 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.93005908629362
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 6.55 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.968801836218432
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.05 seconds
+
+
+Total Time: -25.10 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6906
+  Current serial number in output stream:  6906
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            256520
+Killed
+
+
+10 10
+    12 |      130 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|22:04:14" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.374844608734787
+# of added vehicles: 67
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 23.55 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.662490653353776
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.10 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.819770827600177
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.35 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.434329048894519
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.10 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.266271707308684
+# of added vehicles: 100
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -7.15 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.009651755043958
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.65 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.431126848735545
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.90 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.28355315851852
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.50 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.62439684010591
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.25 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.28651523485247
+# of added vehicles: 74
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.05 seconds
+
+
+Total Time: -20.00 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            274404
+Killed
+
+
+10 10
+    13 |      140 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|22:22:50" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.241744693930144
+# of added vehicles: 70
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.85 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.54805031047774
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.55 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.843518169807206
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.40 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.59423752652789
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.85 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.976765352824717
+# of added vehicles: 95
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 7.60 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.318200609432395
+# of added vehicles: 89
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -6.30 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.65009792502501
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.00 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.158357480347657
+# of added vehicles: 93
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.70 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.3336535805083
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.30 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.478944160158722
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.10 seconds
+
+
+Total Time: -27.95 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            292142
+Killed
+
+
+10 10
+    14 |      150 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|22:43:10" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.836029004130424
+# of added vehicles: 82
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 25.25 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.567773084144289
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.20 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.43926772246996
+# of added vehicles: 88
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.10 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.680466449922438
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.60 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.188298766420575
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.25 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.731545870301296
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.75 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.203759124746302
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.20 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.235483905313686
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.50 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.62876528466476
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.85 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.206003314204807
+# of added vehicles: 78
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -23.15 seconds
+
+
+Total Time: -2.45 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6904
+  Current serial number in output stream:  6904
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            311492
+Killed
+
+
+10 10
+    15 |      160 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|23:01:46" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.550004713678348
+# of added vehicles: 72
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 27.60 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.26990818018055
+# of added vehicles: 80
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.50 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.008198331557518
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.50 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.24475918111506
+# of added vehicles: 85
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.65 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.916006115804278
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -20.05 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.88489380999718
+# of added vehicles: 67
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 53.25 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.34645802990574
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -35.10 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.002890005377896
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.30 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.582472593514654
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.05 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.556956864982183
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.50 seconds
+
+
+Total Time: -21.80 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  7115
+  Current serial number in output stream:  7115
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            329235
+Killed
+
+
+10 10
+    16 |      170 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|23:21:44" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.150670869033862
+# of added vehicles: 74
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 18.95 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.62213749384125
+# of added vehicles: 81
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.30 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.036807136484551
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.90 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.42020120775946
+# of added vehicles: 81
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.35 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.712992081239044
+# of added vehicles: 74
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -26.95 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.18068459538391
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.75 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.280412460773736
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.15 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 20.233541109694368
+# of added vehicles: 60
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.15 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.481904866461438
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.50 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.77450936891196
+# of added vehicles: 102
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.40 seconds
+
+
+Total Time: -26.40 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6984
+  Current serial number in output stream:  6984
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            351360
+Killed
+
+
+10 10
+    17 |      180 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-13|23:40:50" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.404997159369408
+# of added vehicles: 69
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 29.90 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.24749274755031
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.15 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.056435575781258
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.40 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.920705295406856
+# of added vehicles: 91
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.70 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.225535047082134
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.60 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.353119205830959
+# of added vehicles: 78
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.65 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.96107146542107
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.55 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.088407690139512
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 17.60 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.820880842326048
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -16.10 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.425008124285924
+# of added vehicles: 70
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -4.70 seconds
+
+
+Total Time: -23.25 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6904
+  Current serial number in output stream:  6904
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            369468
+Killed
+
+
+10 10
+    18 |      190 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-14|00:02:28" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.57251134143805
+# of added vehicles: 81
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.45 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.970514710676408
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.55 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.261401183754478
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -5.30 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.381631978905968
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.20 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.00133215762129
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.45 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 19.042745269287323
+# of added vehicles: 61
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.50 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.461401381497163
+# of added vehicles: 89
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.70 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.699215078274491
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.25 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.067425453491797
+# of added vehicles: 72
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.15 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.175753998284385
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.85 seconds
+
+
+Total Time: -26.80 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6904
+  Current serial number in output stream:  6904
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            389970
+Killed
+
+
+10 10
+    19 |      200 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-14|00:24:31" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.260013488842446
+# of added vehicles: 90
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 21.85 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.148609248643966
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.40 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.125810246202434
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.40 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.93364941894938
+# of added vehicles: 86
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.45 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.80107892165132
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.20 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 19.959189130727843
+# of added vehicles: 61
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.00 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.150670869033862
+# of added vehicles: 78
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -11.60 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.298590248118984
+# of added vehicles: 71
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 13.65 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.77602847917744
+# of added vehicles: 88
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -12.95 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.539430037580487
+# of added vehicles: 68
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 5.75 seconds
+
+
+Total Time: -25.45 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6904
+  Current serial number in output stream:  6904
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            410354
+Killed
+
+
+10 10
+    20 |      210 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-14|00:52:24" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.796406325050325
+# of added vehicles: 93
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 24.25 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 11.702931198757843
+# of added vehicles: 102
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.35 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.237070093551633
+# of added vehicles: 78
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.15 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.92364969591356
+# of added vehicles: 84
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.70 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.324472033045538
+# of added vehicles: 80
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -2.65 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.62568326070991
+# of added vehicles: 74
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.80 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.082251812831416
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -6.45 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.112677953577816
+# of added vehicles: 73
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 4.40 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.528188278211834
+# of added vehicles: 79
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.30 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.819108724636795
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -1.60 seconds
+
+
+Total Time: -21.95 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6904
+  Current serial number in output stream:  6904
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            434940
+Killed
+
+
+10 10
+    21 |      220 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-14|01:13:38" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.08591839331368
+# of added vehicles: 89
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 20.25 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.968845594635324
+# of added vehicles: 83
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 8.55 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.681445120232736
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -8.90 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.657982337668642
+# of added vehicles: 76
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 1.55 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.392798410378061
+# of added vehicles: 96
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.50 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.799525682540532
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.75 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.264109566210069
+# of added vehicles: 81
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.75 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 19.226217439967304
+# of added vehicles: 62
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.75 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 15.861541790800958
+# of added vehicles: 77
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.65 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.615457728310666
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 0.10 seconds
+
+
+Total Time: -24.15 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6904
+  Current serial number in output stream:  6904
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            454749
+Killed
+
+
+10 10
+    22 |      230 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-14|01:32:24" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Case 0
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.215223167204991
+# of added vehicles: 95
+normal testing
+/home/guannan/Projects/TCP-Interfuser/leaderboard/team_code/tracker.py:141: RuntimeWarning: divide by zero encountered in double_scalars
+  speed = 0.5 * self.frequency * np.sqrt((prev_pos[0]-cur_pos[0])**2+(prev_pos[1]-cur_pos[1])**2) / (to.historical_steps[i+1]-to.historical_steps[i])
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 22.60 seconds
+
+
+Case 1
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 12.783024900637827
+# of added vehicles: 93
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.75 seconds
+
+
+Case 2
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.13614187817936
+# of added vehicles: 90
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -0.20 seconds
+
+
+Case 3
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 14.836071318541663
+# of added vehicles: 82
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -19.85 seconds
+
+
+Case 4
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 13.228728411644036
+# of added vehicles: 94
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 17.60 seconds
+
+
+Case 5
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 17.147025322619182
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 6.40 seconds
+
+
+Case 6
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.360239186918072
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.10 seconds
+
+
+Case 7
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.22292578484828
+# of added vehicles: 75
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 3.25 seconds
+
+
+Case 8
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 16.619889661076645
+# of added vehicles: 69
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: -3.60 seconds
+
+
+Case 9
+Run Scenario
+Town: Town10HD
+Map: Carla/Maps/Town10HD
+Avg region: 18.697665090259243
+# of added vehicles: 66
+normal testing
+call _cleanup in:
+    _load_and_run_scenario
+    end and stop scenario
+Processing Time: 2.90 seconds
+
+
+Total Time: -25.25 seconds
+
+
+X Error of failed request:  BadWindow (invalid Window parameter)
+  Major opcode of failed request:  15 (X_QueryTree)
+  Resource id in failed request:  0x5000a49
+  Serial number of failed request:  6905
+  Current serial number in output stream:  6905
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            472523
+Killed
+
+
+10 10
+    23 |      240 |           INF |           INF
+
+Save Scenario Vector
+/home/guannan/Projects/TCP-Interfuser/temp.npz
+
+~/Projects/CARLA_0.9.15/CarlaUE4.sh --world-port=2000 -RenderOffScreen
+Run carla
+4.26.2-0+++UE4+Release-4.26 522 0
+Disabling core dumps.
+
+cd ~/Projects/TCP-Interfuser;sh leaderboard/scripts/run_cases.sh InterFuser Curve 0 "/home/guannan/Projects/TCP-Interfuser/temp.npz" "2025-02-14|01:50:21" 2000
+Run ADS
+InterFuser
+routes_courve
+Density Level 0
+init statistics_manager
+PORT: 2000
+Log experiment configs
+init execture_one_case
+ports: 2000 2500
+Waited for 10 seconds on IO....
+
+####traffic_manager Failed !!
+time-out of 120000ms while waiting for the simulator, make sure the simulator is ready and connected to localhost:2000
+pygame 2.1.2 (SDL 2.0.16, Python 3.7.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+run_cases vecs: (10, 71)
+Run Scenario
+Town: Town10HD
+Traceback (most recent call last):
+  File "leaderboard/leaderboard/search.py", line 141, in <module>
+    main()
+  File "leaderboard/leaderboard/search.py", line 134, in main
+    leaderboard_evaluator.run_cases(config)
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/execute_cases.py", line 737, in run_cases
+    self._load_and_wait_for_world(self.args, config.town, config.weather)
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/execute_cases.py", line 200, in _load_and_wait_for_world
+    self.traffic_manager.set_synchronous_mode(False)
+AttributeError: 'TestCase' object has no attribute 'traffic_manager'
+call _cleanup in:
+    __del__
+Exception ignored in: <function TestCase.__del__ at 0x7f33d49aab90>
+Traceback (most recent call last):
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/execute_cases.py", line 116, in __del__
+    self._cleanup()
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/execute_cases.py", line 149, in _cleanup
+    self._agent_watchdog.stop()
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/srunner/scenariomanager/watchdog.py", line 72, in stop
+    self._timer.cancel()
+AttributeError: 'NoneType' object has no attribute 'cancel'
+
+fuser -k 2000/tcp
+Stop by port
+2000/tcp:            489414
+Killed
+Traceback (most recent call last):
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/SBT/GA_search.py", line 244, in search_based_testing
+    generations  = 30
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/SBT/GA_search.py", line 224, in GA_search_collision
+    verbose=True)
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/optimize.py", line 67, in minimize
+    res = algorithm.run()
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/algorithm.py", line 141, in run
+    self.next()
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/algorithm.py", line 161, in next
+    self.evaluator.eval(self.problem, infills, algorithm=self)
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/evaluator.py", line 69, in eval
+    self._eval(problem, pop[I], evaluate_values_of, **kwargs)
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/evaluator.py", line 90, in _eval
+    out = problem.evaluate(X, return_values_of=evaluate_values_of, return_as_dictionary=True, **kwargs)
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/problem.py", line 187, in evaluate
+    _out = self.do(X, return_values_of, *args, **kwargs)
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/problem.py", line 229, in do
+    self._evaluate_vectorized(X, out, *args, **kwargs)
+  File "/home/guannan/miniconda3/envs/carla915/lib/python3.7/site-packages/pymoo/core/problem.py", line 237, in _evaluate_vectorized
+    self._evaluate(X, out, *args, **kwargs)
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/SBT/GA_search.py", line 47, in _evaluate
+    fitness = execute(x[len(fitness):], self.current_port, formatted_datetime)
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/SBT/GA_search.py", line 97, in execute
+    fitness = get_fitness(cirtion_file, fitness_file, col='CollisionTest')
+  File "/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/SBT/GA_search.py", line 125, in get_fitness
+    with open(criterion_dir, 'r') as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/guannan/Projects/SBT-data/InterFuser/2025-02-14|01:50:21/criterion.csv'
