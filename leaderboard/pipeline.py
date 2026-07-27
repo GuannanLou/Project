@@ -49,7 +49,7 @@ def perform(setting,agent,line,modules):
     send_qq_email(sender, receiver, password, subject, content, file_path=file)
 
 
-    local_folder = '../data'
+    local_folder = './data'
     archive_name = "experiment_results_machine_{}".format(MACHINE)
     machine_index= MACHINE
     compress_and_upload(local_folder, archive_name, machine_index)   

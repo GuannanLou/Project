@@ -7,8 +7,9 @@ data/*
 **/*.json
 **/__pycache__/*
 
-
-
+experiment_results_machine_**
+experiment_results**
+temp**
 
 back/*
 data/InterFuser/*
@@ -23,3 +24,4 @@ TCP/ckpt/best_epoch=17-val_loss=0.699.ckpt
 TCP/ckpt/best_epoch=26-val_loss=0.699.ckpt
 leaderboard/team_code/interfuser.pth.tar
 scenario_runner/.gitignore
+temp.npz
