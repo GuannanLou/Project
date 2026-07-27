@@ -28,7 +28,7 @@ def perform(setting,agent,line,modules):
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
     filename = OUTPUT_DIR / (
-        f"output-{formatted_datetime}-{agent}-{line}-{setting}.txt"
+        f"output-{formatted_datetime}-{agent}-{line}-{setting}-{str(modules)}.txt"
     )
     print(filename)
     # filename = "/home/guannan/Projects/TCP-Interfuser/output-{}-{}-{}-{}.txt".format(formatted_datetime,agent,line,setting)
