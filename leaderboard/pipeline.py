@@ -54,7 +54,10 @@ def perform(setting,agent,line,modules):
     machine_index= MACHINE
     compress_and_upload(local_folder, archive_name, machine_index)   
 
-
+    local_folder = './outputs'
+    archive_name = "logs_machine_{}".format(MACHINE)
+    machine_index= MACHINE
+    compress_and_upload(local_folder, archive_name, machine_index) 
 
 def send_qq_email(sender, receiver, password, subject, content, file_path=None):
     # ✅ 改成多部分邮件
