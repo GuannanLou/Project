@@ -14,7 +14,8 @@ from email.header import Header
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MACHINE = 0
+MACHINE_CONFIG = PROJECT_ROOT / "machine.conf"
+MACHINE = MACHINE_CONFIG.read_text(encoding="utf-8").strip()
 MACHINE = str(MACHINE).rjust(2,'0')
 
 
