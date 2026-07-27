@@ -10,13 +10,53 @@ from email.mime.application import MIMEApplication  # ✅ 新增
 from email.utils import formataddr
 from email.header import Header
 
+import socket
+import json
 
 from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MACHINE_CONFIG = PROJECT_ROOT / "machine.conf"
-MACHINE = MACHINE_CONFIG.read_text(encoding="utf-8").strip()
-MACHINE = str(MACHINE).rjust(2,'0')
+MACHINE_CONFIG_PATH = PROJECT_ROOT / "machine.conf"
+
+def load_machine_id() -> str:
+    """Read the machine ID corresponding to the current hostname."""
+
+    hostname = socket.gethostname()
+
+    if not MACHINE_CONFIG_PATH.exists():
+        raise FileNotFoundError(
+            f"Machine configuration file not found: "
+            f"{MACHINE_CONFIG_PATH}"
+        )
+
+    with MACHINE_CONFIG_PATH.open("r", encoding="utf-8") as file:
+        machine_config = json.load(file)
+
+    if hostname not in machine_config:
+        available_hosts = ", ".join(machine_config.keys())
+        raise KeyError(
+            f"Hostname {hostname!r} is not configured in "
+            f"{MACHINE_CONFIG_PATH}. "
+            f"Configured hostnames: {available_hosts}"
+        )
+
+    machine_id = machine_config[hostname]
+
+    if not isinstance(machine_id, int) or machine_id < 0:
+        raise ValueError(
+            f"Invalid machine ID for {hostname!r}: {machine_id!r}. "
+            f"The machine ID must be a non-negative integer."
+        )
+
+    return str(machine_id).zfill(2)
+
+
+HOSTNAME = socket.gethostname()
+MACHINE = load_machine_id()
+
+
+# MACHINE = MACHINE_CONFIG.read_text(encoding="utf-8").strip()
+# MACHINE = str(MACHINE).rjust(2,'0')
 
 
 def perform(setting,agent,line,modules):
