@@ -98,8 +98,6 @@ def send_qq_email(sender, receiver, password, subject, content, file_path=None):
 
 
 
-
-
 # 2 yue - check effect of similarity with unique failure
 # perform('GA',         'InterFuser', 'Curve',      ['similarity', 'givenpopulation'])
 # perform('GA',           'InterFuser', 'Curve',    ['similarity', 'initpopulation'])
@@ -162,7 +160,9 @@ print("Experiments Start")
 
 
 perform('GA',           'InterFuser', 'Curve', ['initpopulation'])
-
+perform('GA',           'InterFuser', 'Curve', ['initpopulation', 'similarity'])
+perform('GA',           'InterFuser', 'Curve', ['initpopulation', 'collision_similarity'])
+perform('GA',           'InterFuser', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
 
 sender = 'guannanlou@foxmail.com'
 receiver = '492678502@qq.com'
