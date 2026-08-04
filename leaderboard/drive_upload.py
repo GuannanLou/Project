@@ -11,6 +11,7 @@ def compress_and_upload(
     machine_index: int,
     remote_name: str = "myDrive",
     remote_parent: str = "",
+    remote_subfolder: str = "",
     archive_output_dir: str | None = None,
     delete_archive_after_upload: bool = False,
 ) -> Path:
@@ -95,7 +96,9 @@ def compress_and_upload(
         remote_parts.append(remote_parent.strip("/"))
 
     remote_parts.append(f"machine_{machine_index}")
-
+    if remote_subfolder:
+        remote_parts.append(remote_subfolder.strip("/"))
+        
     remote_folder = "/".join(remote_parts)
     destination = f"{remote_name}:{remote_folder}"
 
