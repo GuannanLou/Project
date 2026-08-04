@@ -93,12 +93,12 @@ def perform(setting,agent,line,modules):
     local_folder = './data'
     archive_name = "experiment_results_machine_{}".format(MACHINE)
     machine_index= MACHINE
-    compress_and_upload(local_folder, archive_name, machine_index)   
+    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder="{}-{}-{}".format(setting,agent,line))   
 
     local_folder = './outputs'
     archive_name = "logs_machine_{}".format(MACHINE)
     machine_index= MACHINE
-    compress_and_upload(local_folder, archive_name, machine_index) 
+    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder="{}-{}-{}".format(setting,agent,line)) 
 
 def send_qq_email(sender, receiver, password, subject, content, file_path=None):
     # ✅ 改成多部分邮件
