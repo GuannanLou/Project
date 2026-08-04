@@ -104,7 +104,7 @@ def compress_and_upload(
         "copy",
         str(archive_path),
         destination,
-        "--ignore-existing",
+        "--ignore-times",
         "--progress",
         "--stats",
         "10s",
