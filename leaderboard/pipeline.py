@@ -203,10 +203,10 @@ def send_qq_email(sender, receiver, password, subject, content, file_path=None):
 print("Experiments Start")
 
 
-perform('GA',           'TCP', 'Curve', ['initpopulation'])
-perform('GA',           'TCP', 'Curve', ['initpopulation', 'similarity'])
-perform('GA',           'TCP', 'Curve', ['initpopulation', 'collision_similarity'])
-perform('GA',           'TCP', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('GA',           'InterFuser', 'Straight', ['initpopulation'])
+perform('GA',           'InterFuser', 'Straight', ['initpopulation', 'similarity'])
+perform('GA',           'InterFuser', 'Straight', ['initpopulation', 'collision_similarity'])
+perform('GA',           'InterFuser', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
 
 sender = 'guannanlou@foxmail.com'
 receiver = '492678502@qq.com'
