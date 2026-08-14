@@ -42,11 +42,11 @@ def load_machine_id() -> str:
 
     machine_id = machine_config[hostname]
 
-    if not isinstance(machine_id, int) or machine_id < 0:
-        raise ValueError(
-            f"Invalid machine ID for {hostname!r}: {machine_id!r}. "
-            f"The machine ID must be a non-negative integer."
-        )
+    # if not isinstance(machine_id, int) or machine_id < 0:
+    #     raise ValueError(
+    #         f"Invalid machine ID for {hostname!r}: {machine_id!r}. "
+    #         f"The machine ID must be a non-negative integer."
+    #     )
 
     return str(machine_id).zfill(2)
 
