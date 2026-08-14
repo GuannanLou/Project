@@ -326,68 +326,56 @@ class CollisionProblem(Problem):
         # similarity = self._similarity(elementwise_similarity, 
         #                               np.array(self.unique_fail_cases), 
         #                               np.array(x))
-        self.local_similarity = self._similarity(local_elementwise_similarity, 
-                                            np.array(self.explor_cases), 
-                                            np.array(x))
-
-        # if self.has_local_similarity:
-        #     similarity = local_similarity
-        # if self.has_collision_similarity:
-        # similarity = collision_similarity
+        self.local_similarity = self._similarity(
+            local_elementwise_similarity,
+            np.array(self.explor_cases),
+            np.array(x)
+        )
         
         diversity = self._diversity(density)
-
+        
         r = 0.3
         print("Collision similarity:", self.collision_similarity)
         print("Fitness similarity:", self.local_similarity)
         print("Fitness diversity:", diversity)
-
+        
         print(collision_features)
         if simulation:
             self.fail_cases += x[fitness==0].tolist()
             self.explor_cases += x.tolist()
-            # self.unique_fail_cases += x[(fitness==0) * (similarity<0.5)].tolist()
+        
             if self.has_collision_similarity:
                 self.fail_collision_features += collision_features[fitness==0].tolist()
-
-
-        # if self.fail_cases != []:
+        
+        
         print('-_-_-_-_-')
         print('Fail Case', np.array(self.fail_cases).shape)
-        # print('Unique Case', np.array(self.unique_fail_cases).shape)
         print('X Case', np.array(x).shape)
         print('_-_-_-_-_')
-
-
-        # r_similarity = 0.3 if self.has_similarity + self.has_local_similarity else 0.0
-        # r_diversity  = 0.3 if self.has_diversity else 0.0
-        # r_fitness   = 1 - r_similarity - r_diversity
-
-        # out['F'] = r_fitness*np.array(fitness) + r_similarity*np.array(similarity) + r_diversity*np.array(diversity)
-
-        # r_similarity = r
-        # r_fitness   = 1 - r_similarity
-
-        # out['F'] = r_fitness*np.array(fitness) + r_similarity*np.array(collision_similarity)
-
+        
+        
         weight_collision = 0
-        weight_scenario  = 0
-
-        if self.has_local_similarity and self.has_collision_similarity:
+        weight_scenario = 0
+        
+        if self.has_similarity and self.has_collision_similarity:
             weight_collision = 0.15
-            weight_scenario  = 0.15
-        elif self.has_local_similarity and not self.has_collision_similarity:
-            weight_scenario  = 0.3
-        elif not self.has_local_similarity and self.has_collision_similarity:
+            weight_scenario = 0.15
+        
+        elif self.has_similarity and not self.has_collision_similarity:
+            weight_scenario = 0.3
+        
+        elif not self.has_similarity and self.has_collision_similarity:
             weight_collision = 0.3
-
-        weight_critical  = 1 if weight_collision + weight_scenario == 0 else 0.7
-        out['F'] = weight_critical *np.array(fitness) + \
-                   weight_collision*np.array(self.collision_similarity) + \
-                   weight_scenario *np.array(self.local_similarity)
-
+        
+        weight_critical = 1 if weight_collision + weight_scenario == 0 else 0.7
+        
+        out['F'] = (
+            weight_critical * np.array(fitness)
+            + weight_collision * np.array(self.collision_similarity)
+            + weight_scenario * np.array(self.local_similarity)
+        )
+        
         print("Fitness weighted:", out['F'])
-
         # self.density_bins += np.histogram(density, bins=10, range=(0,1))[0]
         self.density_bins += np.histogram(x[fitness==0], bins=10, range=(0,1))[0]
         print("Density bins:", self.density_bins)
