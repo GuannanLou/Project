@@ -1,160 +1,70 @@
-import sys
-import datetime
+import sys, json, socket, datetime, smtplib
+from pathlib import Path
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
+from email.mime.application import MIMEApplication
+from email.utils import formataddr
+from email.header import Header
 from leaderboard.SBT.GA_search import search_based_testing
 from drive_upload import compress_and_upload
 
-import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart   # ✅ 新增
-from email.mime.application import MIMEApplication  # ✅ 新增
-from email.utils import formataddr
-from email.header import Header
+ROOT = Path(__file__).resolve().parent.parent
+CONFIG = ROOT / "machine.conf"
+HOST = socket.gethostname()
+SENDER, RECEIVER, PASSWORD = "guannanlou@foxmail.com", "492678502@qq.com", "mnyfxuortepjbfdd"
 
-import socket
-import json
+def load_machine_id():
+    with CONFIG.open("r", encoding="utf-8") as f: config = json.load(f)
+    if HOST not in config: raise KeyError(f"{HOST!r} not found in {CONFIG}")
+    return str(config[HOST]).zfill(3)
 
-from pathlib import Path
-
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
-MACHINE_CONFIG_PATH = PROJECT_ROOT / "machine.conf"
-
-def load_machine_id() -> str:
-    """Read the machine ID corresponding to the current hostname."""
-
-    hostname = socket.gethostname()
-
-    if not MACHINE_CONFIG_PATH.exists():
-        raise FileNotFoundError(
-            f"Machine configuration file not found: "
-            f"{MACHINE_CONFIG_PATH}"
-        )
-
-    with MACHINE_CONFIG_PATH.open("r", encoding="utf-8") as file:
-        machine_config = json.load(file)
-
-    if hostname not in machine_config:
-        available_hosts = ", ".join(machine_config.keys())
-        raise KeyError(
-            f"Hostname {hostname!r} is not configured in "
-            f"{MACHINE_CONFIG_PATH}. "
-            f"Configured hostnames: {available_hosts}"
-        )
-
-    machine_id = machine_config[hostname]
-
-    return str(machine_id).zfill(2)
-
-
-HOSTNAME = socket.gethostname()
 MACHINE = load_machine_id()
 
-
-
 def get_experiment_name(setting, agent, line, modules):
-    base = f"{setting}-{agent}-{line}"
+    s, c = "similarity" in modules, "collision_similarity" in modules
+    fitness = "Both" if s and c else "ScenarioSimilarity" if s else "CollisionSimilarity" if c else "Original"
+    return f"{setting}-{agent}-{line}", fitness
 
-    has_s = "similarity" in modules
-    has_c = "collision_similarity" in modules
-
-    if has_s and has_c:
-        fitness = "Both"
-    elif has_s:
-        fitness = "ScenarioSimilarity"
-    elif has_c:
-        fitness = "CollisionSimilarity"
-    else:
-        fitness = "Original"
-
-    return base, fitness
-
-
-def perform(setting,agent,line,modules):
-    print("Setting: {}, Agent: {}, Line: {}, Modules: {}".format(setting, agent, line, str(modules)))
-
-    experiment_group, fitness_setting = get_experiment_name(
-        setting, agent, line, modules
-    )
-    
-    remote_subfolder = f"{experiment_group}/{fitness_setting}"
-    
-    current_datetime = datetime.datetime.now()
-    formatted_datetime = current_datetime.strftime("%Y-%m-%d|%H:%M:%S")
-
-    OUTPUT_DIR = PROJECT_ROOT / "outputs"
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-
-    filename = OUTPUT_DIR / (
-        f"output-{formatted_datetime}-{agent}-{line}-{setting}-{str(modules)}.txt"
-    )
-    print(filename)
-    # filename = "/home/guannan/Projects/TCP-Interfuser/output-{}-{}-{}-{}.txt".format(formatted_datetime,agent,line,setting)
-
-    f = open(filename, "w", buffering=1, encoding="utf-8")  # 行缓冲模式
-    sys.stdout = f
-
-    search_based_testing(setting, agent, line, modules)
-
-    f.close()
-
-    file = str(filename)
-    sender = 'guannanlou@foxmail.com'
-    receiver = '492678502@qq.com'
-    password = 'mnyfxuortepjbfdd'
-    subject = '{}-{}-{}-{}-{}试验结束'.format(MACHINE,formatted_datetime, agent, line, setting)
-    content = '试验已结束，请查收。'
-    send_qq_email(sender, receiver, password, subject, content, file_path=file)
-
-
-    local_folder = './data'
-    archive_name = "experiment_results_machine_{}".format(MACHINE)
-    machine_index= MACHINE
-    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder=remote_subfolder)   
-
-    local_folder = './outputs'
-    archive_name = "logs_machine_{}".format(MACHINE)
-    machine_index= MACHINE
-    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder=remote_subfolder) 
-
-def send_qq_email(sender, receiver, password, subject, content, file_path=None):
-    # ✅ 改成多部分邮件
+def send_qq_email(subject, content="试验已结束，请查收。", file_path=None):
     msg = MIMEMultipart()
+    msg["From"], msg["To"], msg["Subject"] = formataddr(("Python程序", SENDER)), RECEIVER, subject
+    msg.attach(MIMEText(content, "plain", "utf-8"))
 
-    msg["From"] = formataddr(("Python程序", sender))
-    msg["To"] = receiver
-    msg["Subject"] = subject
-
-    # ✅ 邮件正文
-    body = MIMEText(content, "plain", "utf-8")
-    msg.attach(body)
-
-    # ✅ 如果有附件就添加
     if file_path:
         try:
-            with open(file_path, "rb") as f:
-                attachment = MIMEApplication(f.read())
-
-                # 处理文件名（防止中文乱码）
-                filename = file_path.split("/")[-1]
-
-                attachment.add_header(
-                    'Content-Disposition',
-                    'attachment',
-                    filename=Header(filename, 'utf-8').encode()
-                )
-                msg.attach(attachment)
-        except Exception as e:
-            print("附件读取失败:", e)
-            return
+            with open(file_path, "rb") as f: attachment = MIMEApplication(f.read())
+            attachment.add_header("Content-Disposition", "attachment", filename=Header(Path(file_path).name, "utf-8").encode())
+            msg.attach(attachment)
+        except Exception as e: print("附件读取失败:", e)
 
     try:
-        smtp = smtplib.SMTP_SSL("smtp.qq.com", 465)
-        smtp.login(sender, password)
-        smtp.sendmail(sender, [receiver], msg.as_string())
-        smtp.quit()
+        with smtplib.SMTP_SSL("smtp.qq.com", 465) as smtp:
+            smtp.login(SENDER, PASSWORD); smtp.sendmail(SENDER, [RECEIVER], msg.as_string())
         print("邮件发送成功！")
-    except Exception as e:
-        print("邮件发送失败:", e)
+    except Exception as e: print("邮件发送失败:", e)
 
+def perform(setting, agent, line, modules):
+    group, fitness = get_experiment_name(setting, agent, line, modules)
+    remote = f"{group}/{fitness}"
+    now = datetime.datetime.now().strftime("%Y-%m-%d|%H:%M:%S")
+    out_dir = ROOT / "outputs"; out_dir.mkdir(parents=True, exist_ok=True)
+    filename = out_dir / f"output-{now}-{agent}-{line}-{setting}-{modules}.txt"
+
+    print(f"Setting: {setting}, Agent: {agent}, Line: {line}, Modules: {modules}")
+    print(f"Remote: machine_{MACHINE}/{remote}")
+    print(filename)
+
+    stdout = sys.stdout
+    try:
+        with filename.open("w", buffering=1, encoding="utf-8") as f:
+            sys.stdout = f
+            search_based_testing(setting, agent, line, modules)
+    finally:
+        sys.stdout = stdout
+
+    send_qq_email(f"{MACHINE}-{now}-{agent}-{line}-{setting}试验结束", file_path=str(filename))
+    compress_and_upload("./data", f"experiment_results_machine_{MACHINE}", MACHINE, remote_subfolder=remote)
+    compress_and_upload("./outputs", f"logs_machine_{MACHINE}", MACHINE, remote_subfolder=remote)
 
 
 # 2 yue - check effect of similarity with unique failure
