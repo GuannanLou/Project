@@ -42,12 +42,6 @@ def load_machine_id() -> str:
 
     machine_id = machine_config[hostname]
 
-    # if not isinstance(machine_id, int) or machine_id < 0:
-    #     raise ValueError(
-    #         f"Invalid machine ID for {hostname!r}: {machine_id!r}. "
-    #         f"The machine ID must be a non-negative integer."
-    #     )
-
     return str(machine_id).zfill(2)
 
 
@@ -55,13 +49,34 @@ HOSTNAME = socket.gethostname()
 MACHINE = load_machine_id()
 
 
-# MACHINE = MACHINE_CONFIG.read_text(encoding="utf-8").strip()
-# MACHINE = str(MACHINE).rjust(2,'0')
+
+def get_experiment_name(setting, agent, line, modules):
+    base = f"{setting}-{agent}-{line}"
+
+    has_s = "similarity" in modules
+    has_c = "collision_similarity" in modules
+
+    if has_s and has_c:
+        fitness = "Both"
+    elif has_s:
+        fitness = "ScenarioSimilarity"
+    elif has_c:
+        fitness = "CollisionSimilarity"
+    else:
+        fitness = "Original"
+
+    return base, fitness
 
 
 def perform(setting,agent,line,modules):
     print("Setting: {}, Agent: {}, Line: {}, Modules: {}".format(setting, agent, line, str(modules)))
 
+    experiment_group, fitness_setting = get_experiment_name(
+        setting, agent, line, modules
+    )
+    
+    remote_subfolder = f"{experiment_group}/{fitness_setting}"
+    
     current_datetime = datetime.datetime.now()
     formatted_datetime = current_datetime.strftime("%Y-%m-%d|%H:%M:%S")
 
@@ -93,12 +108,12 @@ def perform(setting,agent,line,modules):
     local_folder = './data'
     archive_name = "experiment_results_machine_{}".format(MACHINE)
     machine_index= MACHINE
-    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder="{}-{}-{}".format(setting,agent,line))   
+    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder=remote_subfolder)   
 
     local_folder = './outputs'
     archive_name = "logs_machine_{}".format(MACHINE)
     machine_index= MACHINE
-    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder="{}-{}-{}".format(setting,agent,line)) 
+    compress_and_upload(local_folder, archive_name, machine_index, remote_subfolder=remote_subfolder) 
 
 def send_qq_email(sender, receiver, password, subject, content, file_path=None):
     # ✅ 改成多部分邮件
