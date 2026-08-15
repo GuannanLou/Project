@@ -6,7 +6,7 @@ from email.mime.application import MIMEApplication
 from email.utils import formataddr
 from email.header import Header
 from leaderboard.SBT.GA_search import search_based_testing
-from drive_upload import compress_and_upload
+from drive_upload import compress_and_upload, compress_selected_and_upload
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG = ROOT / "machine.conf"
@@ -47,12 +47,15 @@ def perform(setting, agent, line, modules):
     group, fitness = get_experiment_name(setting, agent, line, modules)
     remote = f"{group}/{fitness}"
     now = datetime.datetime.now().strftime("%Y-%m-%d|%H:%M:%S")
+
     out_dir = ROOT / "outputs"; out_dir.mkdir(parents=True, exist_ok=True)
+    data_root = ROOT / "data" / agent; data_root.mkdir(parents=True, exist_ok=True)
     filename = out_dir / f"output-{now}-{agent}-{line}-{setting}-{modules}.txt"
 
     print(f"Setting: {setting}, Agent: {agent}, Line: {line}, Modules: {modules}")
     print(f"Remote: machine_{MACHINE}/{remote}")
-    print(filename)
+
+    before = {p.name for p in data_root.iterdir() if p.is_dir()}
 
     stdout = sys.stdout
     try:
@@ -62,10 +65,15 @@ def perform(setting, agent, line, modules):
     finally:
         sys.stdout = stdout
 
-    send_qq_email(f"{MACHINE}-{now}-{agent}-{line}-{setting}试验结束", file_path=str(filename))
-    compress_and_upload("./data", f"experiment_results_machine_{MACHINE}", MACHINE, remote_subfolder=remote)
-    compress_and_upload("./outputs", f"logs_machine_{MACHINE}", MACHINE, remote_subfolder=remote)
+    after = {p.name for p in data_root.iterdir() if p.is_dir()}
+    new_paths = [data_root / x for x in sorted(after - before)]
 
+    print(f"New experiment folders: {len(new_paths)}")
+
+    send_qq_email(f"{MACHINE}-{now}-{agent}-{line}-{setting}试验结束", file_path=str(filename))
+
+    compress_selected_and_upload(new_paths, f"experiment_results_machine_{MACHINE}", MACHINE, remote_subfolder=remote)
+    compress_selected_and_upload([filename], f"logs_machine_{MACHINE}", MACHINE, remote_subfolder=remote)
 
 # 2 yue - check effect of similarity with unique failure
 # perform('GA',         'InterFuser', 'Curve',      ['similarity', 'givenpopulation'])
