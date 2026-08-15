@@ -140,3 +140,19 @@ def compress_and_upload(
         print(f"已删除本地压缩包：{archive_path}")
 
     return archive_path
+
+def compress_selected_and_upload(paths, archive_name, machine_index, remote_subfolder="", remote_name="myDrive"):
+    paths = [Path(p).resolve() for p in paths]
+    archive_name = archive_name if archive_name.endswith(".tar.gz") else archive_name + ".tar.gz"
+    archive_path = PROJECT_ROOT / archive_name if "PROJECT_ROOT" in globals() else Path.cwd() / archive_name
+
+    with tarfile.open(archive_path, "w:gz") as tar:
+        for path in paths:
+            try: arcname = path.relative_to(Path.cwd())
+            except ValueError: arcname = path.name
+            tar.add(path, arcname=str(arcname))
+
+    destination = f"{remote_name}:machine_{machine_index}/{remote_subfolder}"
+    subprocess.run(["rclone", "copy", str(archive_path), destination, "--ignore-times", "--progress", "--retries", "10", "--low-level-retries", "20"], check=True)
+    print(f"上传完成：{destination}/{archive_path.name}")
+    return archive_path
