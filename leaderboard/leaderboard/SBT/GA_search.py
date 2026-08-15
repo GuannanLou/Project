@@ -39,7 +39,7 @@ from pymoo.optimize import minimize
 save_surrogate_log = True
 AGENT = 'TCP'
 ROAD = 'Straight'
-seed = int(time.time())
+seed = int(time.time_ns() % (2**32 - 1))
 
 # PROJECT_ROOT = Path(__file__).resolve().parent.parent
 # SBT_DATA_ROOT = Path(
@@ -778,7 +778,7 @@ def NSGA2_search_collision(pop_size = 20, n_offsprings = 1, generations = 50, mo
     res = minimize(problem,
         algorithm,
         termination,
-        seed=1,
+        seed=seed,
         save_history=False,
         verbose=True)
 
@@ -814,7 +814,7 @@ def GA_search_collision(pop_size = 20, n_offsprings = 1, generations = 50, modul
     res = minimize(problem,
         algorithm,
         termination,
-        seed=1,
+        seed=seed,
         save_history=False,
         verbose=True)
 
@@ -848,7 +848,7 @@ def GBGA_search_collision(pop_size = 20, n_offsprings = 1, generations = 50, mod
     res = minimize(problem,
         algorithm,
         termination,
-        seed=1,
+        seed=seed,
         save_history=False,
         verbose=True)
 
