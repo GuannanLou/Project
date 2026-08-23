@@ -868,14 +868,20 @@ def smartrandom_search_collision(pop_size = 20, n_offsprings = 10, generations =
     print("begin smartrandom_search_collision")
 
     problem = CollisionProblem(n_var=11+15*4, modules=modules)
-        # pop_size     = 2 
-        # n_offsprings = 2
-        # generations  = 5
+
     problem.has_initpopulation = True
-    sampling = problem.sampling()
+    # sampling = problem.sampling()
+    sampling = AverageSampling()
+
+    experiment_seed = int(time.time_ns() % (2**32 - 1))
+    rng = np.random.default_rng(experiment_seed)
     print(sampling)
         
     for i in range(generations):
+
+        global seed
+        seed = int(rng.integers(0, 2**32 - 1))
+        
         print("Generation:", i+1)
 
         # Generate random solutions
