@@ -156,15 +156,17 @@ def send_qq_email(sender, receiver, password, subject, content, file_path=None):
 print("Experiments Start")
 
 
-perform('random',       'InterFuser', 'Curve', [''])
-perform('smartrandom',  'InterFuser', 'Curve', ['initpopulation'])
-perform('random',       'InterFuser', 'Straight', [''])
-perform('smartrandom',  'InterFuser', 'Straight', ['initpopulation'])
+# perform('random',       'InterFuser', 'Curve', [''])
+# perform('smartrandom',  'InterFuser', 'Curve', ['initpopulation'])
+# perform('random',       'InterFuser', 'Straight', [''])
+# perform('smartrandom',  'InterFuser', 'Straight', ['initpopulation'])
 
 # perform('GBGA',           'InterFuser', 'Curve', ['initpopulation'])
 # perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'similarity'])
 # perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'collision_similarity'])
-# perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('GBGA',           'InterFuser', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('GA',             'InterFuser', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
+
 
 sender = 'guannanlou@foxmail.com'
 receiver = '492678502@qq.com'
