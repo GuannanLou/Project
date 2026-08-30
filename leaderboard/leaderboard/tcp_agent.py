@@ -66,21 +66,25 @@ class TCPAgent(autonomous_agent.AutonomousAgent):
 		self._im_transform = T.Compose([T.ToTensor(), T.Normalize(mean=[0.485,0.456,0.406], std=[0.229,0.224,0.225])])
 
 		self.last_steers = deque()
+		
 		if SAVE_PATH is not None:
-			if SAVE_IMG != 'False':
-				now = datetime.datetime.now()
-				string = pathlib.Path(os.environ['ROUTES']).stem + '_'
-				string += '_'.join(map(lambda x: '%02d' % x, (now.month, now.day, now.hour, now.minute, now.second)))
-
-				# print (string)
-
-				self.save_path = pathlib.Path(os.environ['SAVE_PATH']) / string
-				self.save_path.mkdir(parents=True, exist_ok=False)
-				os.environ['TEST_CASE_PATH'] = str(self.save_path)
-				
-				(self.save_path / 'rgb').mkdir()
-				(self.save_path / 'meta').mkdir()
-				(self.save_path / 'bev').mkdir()
+		    now = datetime.datetime.now()
+		    string = pathlib.Path(os.environ['ROUTES']).stem + '_'
+		    string += '_'.join(map(
+		        lambda x: '%02d' % x,
+		        (now.month, now.day, now.hour, now.minute, now.second)
+		    ))
+		
+		    # 每个simulation始终建立独立目录，保存路线、速度和控制数据
+		    self.save_path = pathlib.Path(os.environ['SAVE_PATH']) / string
+		    self.save_path.mkdir(parents=True, exist_ok=False)
+		    os.environ['TEST_CASE_PATH'] = str(self.save_path)
+		
+		    # SAVE_IMG=False时不保存RGB、BEV和meta图片
+		    if SAVE_IMG != 'False':
+		        (self.save_path / 'rgb').mkdir()
+		        (self.save_path / 'meta').mkdir()
+		        (self.save_path / 'bev').mkdir()
 
 	def _init(self):
 		self._route_planner = RoutePlanner(4.0, 50.0)
