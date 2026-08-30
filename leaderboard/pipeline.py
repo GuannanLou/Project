@@ -164,8 +164,15 @@ print("Experiments Start")
 # perform('GBGA',           'InterFuser', 'Curve', ['initpopulation'])
 # perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'similarity'])
 # perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'collision_similarity'])
-perform('GBGA',           'InterFuser', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
-perform('GA',             'InterFuser', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('GBGA',             'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('GA',               'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('smartrandom',      'TCP', 'Straight', ['initpopulation'])
+perform('random',           'TCP', 'Straight', [])
+
+perform('GBGA',             'TCP', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('GA',               'TCP', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
+perform('smartrandom',      'TCP', 'Curve', ['initpopulation'])
+perform('random',           'TCP', 'Curve', [])
 
 
 sender = 'guannanlou@foxmail.com'
