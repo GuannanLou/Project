@@ -40,7 +40,7 @@ export MAX_SPEED=5
 MODEL=$1
 if [ "$MODEL" = "TCP" ]; then
     echo "TCP"
-    export TEAM_AGENT=team_code/tcp_agent.py
+    export TEAM_AGENT=leaderboard/leaderboard/tcp_agent.py
     export TEAM_CONFIG=TCP/epoch=59-last.ckpt
 elif [ "$MODEL" = "InterFuser" ]; then
     echo "InterFuser"
