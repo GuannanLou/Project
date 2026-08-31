@@ -997,14 +997,14 @@ def search_based_testing(setting='random', agent='TCP', line='Straight', modules
         AGENT = agent
         ROAD = line
         
-        # pop_size     = 20 
-        # n_offsprings = 10
-        # generations  = 54
+        pop_size     = 20 
+        n_offsprings = 10
+        generations  = 54
         # # generations  = 30
 
-        pop_size     = 2 
-        n_offsprings = 2
-        generations  = 3
+        # pop_size     = 2 
+        # n_offsprings = 2
+        # generations  = 3
         if setting == 'given_search_collision':
             generations  = 10
         print("pop_size:", pop_size, "n_offsprings:", n_offsprings, "generations:", generations)
