@@ -63,7 +63,7 @@ def perform(setting,agent,line,modules):
     file = str(filename)
     sender = 'guannanlou@foxmail.com'
     receiver = '492678502@qq.com'
-    password = os.getenv('QQ_EMAIL_AUTH_CODE')
+    password = 'mnyfxuortepjbfdd'
     subject = '{}-{}-{}-{}-{}试验结束'.format(MACHINE,formatted_datetime, agent, line, setting)
     content = '试验已结束，请查收。'
     send_qq_email(sender, receiver, password, subject, content, file_path=file)
