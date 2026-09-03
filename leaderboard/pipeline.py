@@ -48,10 +48,14 @@ def perform(setting,agent,line,modules):
     data_root.mkdir(parents=True, exist_ok=True)
     before = {p.name for p in data_root.iterdir() if p.is_dir()}
 
+    original_stdout = sys.stdout
     f = open(filename, "w", buffering=1, encoding="utf-8")
-    sys.stdout = f
-    search_based_testing(setting, agent, line, modules)
-    f.close()
+    try:
+        sys.stdout = f
+        search_based_testing(setting, agent, line, modules)
+    finally:
+        sys.stdout = original_stdout
+        f.close()
 
     after = {p.name for p in data_root.iterdir() if p.is_dir()}
     new_paths = [data_root / x for x in sorted(after - before)]
