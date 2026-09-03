@@ -1,4 +1,4 @@
-import sys, json, socket, datetime, smtplib
+import sys, os, json, socket, datetime, smtplib
 from pathlib import Path
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -59,7 +59,7 @@ def perform(setting,agent,line,modules):
     file = str(filename)
     sender = 'guannanlou@foxmail.com'
     receiver = '492678502@qq.com'
-    password = 'mnyfxuortepjbfdd'
+    password = os.getenv('QQ_EMAIL_AUTH_CODE')
     subject = '{}-{}-{}-{}-{}试验结束'.format(MACHINE,formatted_datetime, agent, line, setting)
     content = '试验已结束，请查收。'
     send_qq_email(sender, receiver, password, subject, content, file_path=file)
@@ -68,6 +68,10 @@ def perform(setting,agent,line,modules):
     compress_selected_and_upload([filename], f"logs_machine_{MACHINE}", MACHINE, remote_subfolder=remote_subfolder)
 
 def send_qq_email(sender, receiver, password, subject, content, file_path=None):
+    if not password:
+        print("未设置 QQ_EMAIL_AUTH_CODE，跳过邮件通知。")
+        return
+
     msg = MIMEMultipart()
     msg["From"] = formataddr(("Python程序", sender))
     msg["To"] = receiver
@@ -155,36 +159,45 @@ def send_qq_email(sender, receiver, password, subject, content, file_path=None):
 
 print("Experiments Start")
 
+# 按优先级列出尚未完成的实验及需要运行它们的机器。
+# 顺序：GBGA-TCP-Straight-Both -> 其他 TCP -> InterFuser。
+# MACHINE 由 machine.conf 读取，下面统一使用整数编号，避免 "01" 与 1 不匹配。
+PENDING_EXPERIMENTS = [
+    # 1. 所有机器首先运行 GBGA-TCP-Straight-Both
+    (range(1, 16), 'GBGA',        'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
 
-# perform('random',       'InterFuser', 'Curve', [''])
-# perform('smartrandom',  'InterFuser', 'Curve', ['initpopulation'])
-# perform('random',       'InterFuser', 'Straight', [''])
-# perform('smartrandom',  'InterFuser', 'Straight', ['initpopulation'])
+    # 2. 补齐其余 TCP 实验
+    ({1, 2, 3, 5, 7, 9, 12, 13}, 'GBGA',       'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    ({1, 2, 3, 5, 7, 9, 12, 13}, 'GA',         'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    ({1, 4, 6, 8, 9, 10, 11, 13, 15}, 'GA',    'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
+    ({1, 2, 3, 5, 7, 9, 12, 13}, 'random',     'TCP',        'Curve',    []),
+    ({4, 6, 8, 10, 11, 13, 15},  'random',     'TCP',        'Straight', []),
+    ({1, 2, 3, 5, 7, 9, 12, 13}, 'smartrandom','TCP',        'Curve',    ['initpopulation']),
+    ({4, 8, 11, 15},              'smartrandom','TCP',        'Straight', ['initpopulation']),
 
-# perform('GBGA',           'InterFuser', 'Curve', ['initpopulation'])
-# perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'similarity'])
-# perform('GBGA',           'InterFuser', 'Curve', ['initpopulation', 'collision_similarity'])
+    # 3. 最后补齐 InterFuser 实验
+    ({3, 4, 13},                  'GA',          'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    ({3},                         'GA',          'InterFuser', 'Curve',    ['initpopulation', 'collision_similarity']),
+    ({5, 11},                     'GBGA',        'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+]
 
-# perform('random',           'TCP', 'Curve', [])
-# perform('smartrandom',      'TCP', 'Curve', ['initpopulation'])
-# perform('GBGA',             'TCP', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
-# perform('GA',               'TCP', 'Curve', ['initpopulation', 'similarity', 'collision_similarity'])
+machine_id = int(MACHINE)
+machine_queue = [
+    (setting, agent, line, modules)
+    for machines, setting, agent, line, modules in PENDING_EXPERIMENTS
+    if machine_id in machines
+]
 
-
-# perform('smartrandom',      'TCP', 'Straight', ['initpopulation'])
-# perform('random',           'TCP', 'Straight', [])
-# perform('GA',               'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
-
-perform('GBGA',             'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'])
-
-
-
-
+print(f"Machine {MACHINE}: {len(machine_queue)} pending experiment(s)")
+for index, (setting, agent, line, modules) in enumerate(machine_queue, 1):
+    experiment_group, fitness_setting = get_experiment_name(setting, agent, line, modules)
+    print(f"[{index}/{len(machine_queue)}] {experiment_group}/{fitness_setting}")
+    perform(setting, agent, line, modules)
 
 sender = 'guannanlou@foxmail.com'
 receiver = '492678502@qq.com'
-password = 'mnyfxuortepjbfdd'
-subject = '试验结束'
-content = '试验已结束，请查收。'
+password = os.getenv('QQ_EMAIL_AUTH_CODE')
+subject = f'{MACHINE}号机器全部补充试验结束'
+content = f'{MACHINE}号机器的{len(machine_queue)}项补充试验已全部结束，请查收。'
 
 send_qq_email(sender, receiver, password, subject, content, file_path=None)
