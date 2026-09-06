@@ -167,8 +167,8 @@ print("Experiments Start")
 # 顺序：GBGA-TCP-Straight-Both -> 其他 TCP -> InterFuser。
 # MACHINE 由 machine.conf 读取，下面统一使用整数编号，避免 "01" 与 1 不匹配。
 PENDING_EXPERIMENTS = [
-    ({14}), 'GA',     'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'],
-    ({14}), 'random', 'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'],
+    ({14}, 'GA',     'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
+    ({14}, 'random', 'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
     
     
     # # 1. 所有机器首先运行 GBGA-TCP-Straight-Both
