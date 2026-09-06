@@ -167,22 +167,26 @@ print("Experiments Start")
 # 顺序：GBGA-TCP-Straight-Both -> 其他 TCP -> InterFuser。
 # MACHINE 由 machine.conf 读取，下面统一使用整数编号，避免 "01" 与 1 不匹配。
 PENDING_EXPERIMENTS = [
-    # 1. 所有机器首先运行 GBGA-TCP-Straight-Both
-    (range(1, 16), 'GBGA',        'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
+    ({14}), 'GA',     'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'],
+    ({14}), 'random', 'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity'],
+    
+    
+    # # 1. 所有机器首先运行 GBGA-TCP-Straight-Both
+    # (range(1, 16), 'GBGA',        'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
 
-    # 2. 补齐其余 TCP 实验
-    ({1, 2, 3, 5, 7, 9, 12, 13}, 'GBGA',       'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
-    ({1, 2, 3, 5, 7, 9, 12, 13}, 'GA',         'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
-    ({1, 4, 6, 8, 9, 10, 11, 13, 15}, 'GA',    'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
-    ({1, 2, 3, 5, 7, 9, 12, 13}, 'random',     'TCP',        'Curve',    []),
-    ({4, 6, 8, 10, 11, 13, 15},  'random',     'TCP',        'Straight', []),
-    ({1, 2, 3, 5, 7, 9, 12, 13}, 'smartrandom','TCP',        'Curve',    ['initpopulation']),
-    ({4, 8, 11, 15},              'smartrandom','TCP',        'Straight', ['initpopulation']),
+    # # 2. 补齐其余 TCP 实验
+    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'GBGA',       'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'GA',         'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    # ({1, 4, 6, 8, 9, 10, 11, 13, 15}, 'GA',    'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
+    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'random',     'TCP',        'Curve',    []),
+    # ({4, 6, 8, 10, 11, 13, 15},  'random',     'TCP',        'Straight', []),
+    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'smartrandom','TCP',        'Curve',    ['initpopulation']),
+    # ({4, 8, 11, 15},              'smartrandom','TCP',        'Straight', ['initpopulation']),
 
-    # 3. 最后补齐 InterFuser 实验
-    ({3, 4, 13},                  'GA',          'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
-    ({3},                         'GA',          'InterFuser', 'Curve',    ['initpopulation', 'collision_similarity']),
-    ({5, 11},                     'GBGA',        'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    # # 3. 最后补齐 InterFuser 实验
+    # ({3, 4, 13},                  'GA',          'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    # ({3},                         'GA',          'InterFuser', 'Curve',    ['initpopulation', 'collision_similarity']),
+    # ({5, 11},                     'GBGA',        'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
 ]
 
 machine_id = int(MACHINE)
