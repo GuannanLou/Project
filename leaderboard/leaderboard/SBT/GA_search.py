@@ -31,13 +31,6 @@ from pymoo.termination import get_termination
 from pymoo.optimize import minimize
 
 
-# ============================================================
-# 固定population受控实验配置
-# 四个ADS/道路配置共享同一个20×71场景文件
-# ============================================================
-CONTROLLED_POPULATION_FILE = SBT_DIR / "controlled_uniform_population_seed_42.npy"
-CONTROLLED_POPULATION_SEED = 42
-CONTROLLED_POPULATION_SIZE = 20
 
 
 # GA = os.environ['GA']==True
@@ -73,6 +66,13 @@ OUTPUT_FILE = PROJECT_ROOT / "data" / "output.npz"
 #CARLA_PATH = '~/Projects/CARLA_0.9.10/CarlaUE4.sh'
 CARLA_PATH = str(Path.home() / "carla" / "CarlaUE4.sh")
 
+# ============================================================
+# 固定population受控实验配置
+# 四个ADS/道路配置共享同一个20×71场景文件
+# ============================================================
+CONTROLLED_POPULATION_FILE = SBT_DIR / "controlled_uniform_population_seed_42.npy"
+CONTROLLED_POPULATION_SEED = 42
+CONTROLLED_POPULATION_SIZE = 20
 
 class CollisionMultiProblem(Problem):
     def __init__(self, n_var, modules=[]):
