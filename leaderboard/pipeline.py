@@ -29,11 +29,12 @@ def get_experiment_name(setting, agent, line, modules):
     fitness = "Both" if has_s and has_c else "ScenarioSimilarity" if has_s else "CollisionSimilarity" if has_c else "Original"
     return base, fitness
 
-def perform(setting,agent,line,modules):
+def perform(setting, agent, line, modules, controlled=False):
     print("Setting: {}, Agent: {}, Line: {}, Modules: {}".format(setting, agent, line, str(modules)))
 
     experiment_group, fitness_setting = get_experiment_name(setting, agent, line, modules)
-    remote_subfolder = f"{experiment_group}/{fitness_setting}"
+    # 受控实验上传到独立目录；普通实验继续使用原来的实验目录
+    remote_subfolder = f"_controlled_population_seed_42/{agent}-{line}" if controlled else f"{experiment_group}/{fitness_setting}"
 
     current_datetime = datetime.datetime.now()
     formatted_datetime = current_datetime.strftime("%Y-%m-%d|%H:%M:%S")
@@ -68,8 +69,12 @@ def perform(setting,agent,line,modules):
     content = '试验已结束，请查收。'
     send_qq_email(sender, receiver, password, subject, content, file_path=file)
 
-    compress_selected_and_upload(new_paths, f"experiment_results_machine_{MACHINE}", MACHINE, remote_subfolder=remote_subfolder)
-    compress_selected_and_upload([filename], f"logs_machine_{MACHINE}", MACHINE, remote_subfolder=remote_subfolder)
+    # 特殊文件名不会被当前分析notebook匹配
+    result_name = f"controlled_population_results_machine_{MACHINE}" if controlled else f"experiment_results_machine_{MACHINE}"
+    log_name = f"controlled_population_logs_machine_{MACHINE}" if controlled else f"logs_machine_{MACHINE}"
+    compress_selected_and_upload(new_paths, result_name, MACHINE, remote_subfolder=remote_subfolder)
+    compress_selected_and_upload([filename], log_name, MACHINE, remote_subfolder=remote_subfolder)
+
 
 def send_qq_email(sender, receiver, password, subject, content, file_path=None):
     if not password:
@@ -162,31 +167,16 @@ def send_qq_email(sender, receiver, password, subject, content, file_path=None):
 # perform('smartrandom',  'InterFuser', 'Curve',    ['initpopulation'])
 
 print("Experiments Start")
-
-# 按优先级列出尚未完成的实验及需要运行它们的机器。
-# 顺序：GBGA-TCP-Straight-Both -> 其他 TCP -> InterFuser。
-# MACHINE 由 machine.conf 读取，下面统一使用整数编号，避免 "01" 与 1 不匹配。
+# ============================================================
+# 固定场景重复性实验
+# 15台机器均使用由AverageSampling和seed=42生成的同一组20个场景
+# 每台机器运行TCP/InterFuser × Curve/Straight四种配置
+# ============================================================
 PENDING_EXPERIMENTS = [
-    # ({14}, 'GA',     'TCP', 'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
-    ({14}, 'random', 'TCP', 'Straight', []),
-    
-    
-    # # 1. 所有机器首先运行 GBGA-TCP-Straight-Both
-    # (range(1, 16), 'GBGA',        'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
-
-    # # 2. 补齐其余 TCP 实验
-    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'GBGA',       'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
-    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'GA',         'TCP',        'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
-    # ({1, 4, 6, 8, 9, 10, 11, 13, 15}, 'GA',    'TCP',        'Straight', ['initpopulation', 'similarity', 'collision_similarity']),
-    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'random',     'TCP',        'Curve',    []),
-    # ({4, 6, 8, 10, 11, 13, 15},  'random',     'TCP',        'Straight', []),
-    # ({1, 2, 3, 5, 7, 9, 12, 13}, 'smartrandom','TCP',        'Curve',    ['initpopulation']),
-    # ({4, 8, 11, 15},              'smartrandom','TCP',        'Straight', ['initpopulation']),
-
-    # # 3. 最后补齐 InterFuser 实验
-    # ({3, 4, 13},                  'GA',          'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
-    # ({3},                         'GA',          'InterFuser', 'Curve',    ['initpopulation', 'collision_similarity']),
-    # ({5, 11},                     'GBGA',        'InterFuser', 'Curve',    ['initpopulation', 'similarity', 'collision_similarity']),
+    (range(1, 16), 'given_search_collision', 'TCP',        'Curve',    []),
+    (range(1, 16), 'given_search_collision', 'TCP',        'Straight', []),
+    (range(1, 16), 'given_search_collision', 'InterFuser', 'Curve',    []),
+    (range(1, 16), 'given_search_collision', 'InterFuser', 'Straight', [])
 ]
 
 machine_id = int(MACHINE)
@@ -196,11 +186,13 @@ machine_queue = [
     if machine_id in machines
 ]
 
-print(f"Machine {MACHINE}: {len(machine_queue)} pending experiment(s)")
+print(f"Machine {MACHINE}: {len(machine_queue)} controlled experiment(s)")
 for index, (setting, agent, line, modules) in enumerate(machine_queue, 1):
     experiment_group, fitness_setting = get_experiment_name(setting, agent, line, modules)
     print(f"[{index}/{len(machine_queue)}] {experiment_group}/{fitness_setting}")
-    perform(setting, agent, line, modules)
+    # given_search_collision属于固定场景实验，使用独立目录和压缩包名称
+    perform(setting, agent, line, modules, controlled=True)
+
 
 sender = 'guannanlou@foxmail.com'
 receiver = '492678502@qq.com'
