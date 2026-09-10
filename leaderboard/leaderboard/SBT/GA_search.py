@@ -31,6 +31,14 @@ from pymoo.termination import get_termination
 from pymoo.optimize import minimize
 
 
+# ============================================================
+# 固定population受控实验配置
+# 四个ADS/道路配置共享同一个20×71场景文件
+# ============================================================
+CONTROLLED_POPULATION_FILE = SBT_DIR / "controlled_uniform_population_seed_42.npy"
+CONTROLLED_POPULATION_SEED = 42
+CONTROLLED_POPULATION_SIZE = 20
+
 
 # GA = os.environ['GA']==True
 # LOG = os.environ['LOG']==True
@@ -944,42 +952,37 @@ def random_search_collision(pop_size = 20, n_offsprings = 10, generations = 30, 
         sys.stdout.close()
         sys.stdout = sys.__stdout__
 
-def given_search_collision(pop_size = 20, n_offsprings = 10, generations = 10, modules=None):
+def given_search_collision(pop_size=20, n_offsprings=10, generations=1, modules=None):
+    """使用AverageSampling生成一次固定population，并在当前ADS/道路配置上运行相同的20个场景。"""
+    global seed
     print("begin given_search_collision")
-    # np.random.seed(3)
 
-    problem = CollisionProblem(n_var=11+15*4)
+    # 如果固定population尚不存在，则调用现有AverageSampling生成一次并保存
+    if not CONTROLLED_POPULATION_FILE.exists():
+        original_seed = seed; seed = CONTROLLED_POPULATION_SEED
+        try:
+            problem = CollisionProblem(n_var=11+15*4, modules=['initpopulation'])
+            X = AverageSampling()._do(problem=problem, n_samples=CONTROLLED_POPULATION_SIZE)
+        finally:
+            seed = original_seed  # 恢复原来的全局seed，避免影响其他实验
+        CONTROLLED_POPULATION_FILE.parent.mkdir(parents=True, exist_ok=True); np.save(CONTROLLED_POPULATION_FILE, X)
+        print("Controlled population created:", CONTROLLED_POPULATION_FILE)
+    else:
+        X = np.load(CONTROLLED_POPULATION_FILE, allow_pickle=False)
+        print("Existing controlled population loaded:", CONTROLLED_POPULATION_FILE)
 
-    for _ in range(3):
-        # data = np.load('/home/guannan/Projects/TCP-Interfuser/leaderboard/leaderboard/SBT/unique_failures.npy', allow_pickle=True)
-        data = np.load(str(UNIQUE_FAILURES_FILE), allow_pickle=True)
+    # 严格验证population，避免意外使用错误文件或错误场景数量
+    if X.shape != (CONTROLLED_POPULATION_SIZE, 71): raise ValueError(f"Controlled population shape should be (20,71), received {X.shape}")
+    population_hash = __import__('hashlib').sha256(np.ascontiguousarray(X).tobytes()).hexdigest()
+    print("Population seed:", CONTROLLED_POPULATION_SEED); print("Population shape:", X.shape); print("Population SHA256:", population_hash)
+    print("Density means:", X[:,11:].mean(axis=1).round(4)); print("X:", X.shape, X)
 
-        print(data.shape)  # 输出：(30, 71)
-        print(data[:, :11])  # 所有行前11列一样
-        print(np.mean(data[:, 11:], axis=1))  # 每行后60列的均值约为0.6
-
-        for i in range(data.shape[0]//10+1):
-            print(i*10, (i+1)*10)
-
-            X = data[i*10:(i+1)*10]
-            # Evaluate the solutions
-            out={'F': None}
-            problem._evaluate(X, out=out)
-
-            # Get the fitness values
-            F = np.array([out['F']])
-
-            print('X:', X.shape, X)
-            print('F:', F.shape, F)
-
-    np.savez('./data/output.npz', X, F)
-
-    if save_surrogate_log:
-        sys.stdout.close()
-        sys.stdout = sys.__stdout__
-
-
-
+    # 一次性运行全部20个场景，不重复3次，也不拆分成每批10个
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%d|%H:%M:%S"); current_port = get_free_port(2000, 2000, 3000)
+    fitness = execute(X, current_port=current_port, formatted_datetime=timestamp, agent=AGENT, road=ROAD)
+    F = np.asarray(fitness)
+    print("F:", F.shape, F); np.savez(OUTPUT_FILE, X=X, F=F)
+        
 
 def search_based_testing(setting='random', agent='TCP', line='Straight', modules=None):
     search_algorithms = {
@@ -997,16 +1000,12 @@ def search_based_testing(setting='random', agent='TCP', line='Straight', modules
         AGENT = agent
         ROAD = line
         
-        pop_size     = 20 
+        pop_size     = 2 
         n_offsprings = 10
         generations  = 54
-        # # generations  = 30
 
-        # pop_size     = 2 
-        # n_offsprings = 2
-        # generations  = 3
         if setting == 'given_search_collision':
-            generations  = 10
+            generations  = 1
         print("pop_size:", pop_size, "n_offsprings:", n_offsprings, "generations:", generations)
         try:
             search_algorithms[setting](
