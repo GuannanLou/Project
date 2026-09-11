@@ -1000,7 +1000,7 @@ def search_based_testing(setting='random', agent='TCP', line='Straight', modules
         AGENT = agent
         ROAD = line
         
-        pop_size     = 2 
+        pop_size     = 20 
         n_offsprings = 10
         generations  = 54
 
