@@ -62,9 +62,9 @@ def perform(setting, agent, line, modules, controlled=False):
     new_paths = [data_root / x for x in sorted(after - before)]
 
     file = str(filename)
-    sender = 'guannanlou@foxmail.com'
-    receiver = '492678502@qq.com'
-    password = 'mnyfxuortepjbfdd'
+    sender = 'XXXXXX@foxmail.com'
+    receiver = 'XXXXXX@qq.com'
+    password = 'XXXXXXXXXXXXXX'
     subject = '{}-{}-{}-{}-{}试验结束'.format(MACHINE,formatted_datetime, agent, line, setting)
     content = '试验已结束，请查收。'
     send_qq_email(sender, receiver, password, subject, content, file_path=file)
